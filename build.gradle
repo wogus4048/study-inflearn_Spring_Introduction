@@ -1,0 +1,27 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.4' // start.spring.io에서 선택한 스프링부트 버전
+	id 'io.spring.dependency-management' version '1.0.14.RELEASE' // 사용하는 스프링부트에 버전에 따라 의존성 관리를 해주는 부분
+	id 'java' // 언어선택 자바했던거
+}
+
+group = 'hello' // 프로젝트 메타데이터에서 그룹네임 지정했던것
+version = '0.0.1-SNAPSHOT' // ?
+sourceCompatibility = '11' // 자바 버전 선택했던 부분 , compatibility ->호환성 , 자바 11버전선택했었믐
+
+repositories {
+	mavenCentral()  //  디펜던시 추가했던 starter- ~  라이브러리들을 가져오기위한 곳
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //thymeleaf 선택했던거 라이브러리를 가져오는부분.
+	implementation 'org.springframework.boot:spring-boot-starter-web' // 스프링부트 웹 선택했던거
+	testImplementation 'org.springframework.boot:spring-boot-starter-test' // 테스트 라이브러리는 자동으로 추가된다.
+
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'//jdbc를 사용하려고
+	runtimeOnly 'com.h2database:h2'//h2 데이터베이스에 접근하기위함.
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
