@@ -9,8 +9,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository; //여기서는 멤버저장소 인터페이스를 선언한다. 그렇게 함으로서 해당 인터페이스를 구현한 저장소객체를 다 받을수 있기떄문.

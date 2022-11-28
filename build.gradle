@@ -17,8 +17,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'// 스프링부트 웹 선택했던거
 	implementation 'org.projectlombok:lombok:1.18.22' //롬복 라이브러리 추가 -> https://www.daleseo.com/lombok-popular-annotations/
 	testImplementation 'org.springframework.boot:spring-boot-starter-test' // 테스트 라이브러리는 자동으로 추가된다.
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // jpa를 사용하기 위해 추가
 
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'//jdbc를 사용하려고
+//	implementation 'org.springframework.boot:spring-boot-starter-jdbc'//jdbc를 사용하려고  -> jpa쓸때는 jap안에 들어있으므로 없어도됨
 	runtimeOnly 'com.h2database:h2'//h2 데이터베이스에 접근하기위함.
 
 }
