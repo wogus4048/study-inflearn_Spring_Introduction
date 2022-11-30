@@ -25,8 +25,7 @@ public class MemberService {
     /*
             회원가입
          */
-    public Long join(Member member) {
-        //같은 이름이 있는 회원은 안됨 (중복방지-> 임의로 지정한 규칙)
+    public Long join(Member member) {//같은 이름이 있는 회원은 안됨 (중복방지-> 임의로 지정한 규칙)
         validateDuplicateMember(member);  //중복회원 검증 메소드
         memberRepository.save(member);
         return member.getId();
